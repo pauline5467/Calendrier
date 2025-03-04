@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #2c2a4a;
+    margin: 20px;
+}
+
+
+/* Conteneur principal du calendrier */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 600px;
+    margin: 20px auto;
+    gap: 10px; /* Espacement entre les cases */
+    justify-content: center; /* Centre le calendrier horizontalement */
+    padding: 20px; /* Marges autour du calendrier */
+    box-sizing: border-box; /* Inclut le padding dans les dimensions */
+}
+
+.month-header {
+    grid-column: span 6; /* Occupe toute la ligne dans la grille */
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c2a4a;
+    text-align: center;
+    margin: 20px 0 10px;
+    border-bottom: 2px solid #2c2a4a;
+    padding-bottom: 5px;
+}
+
+/* Cases du calendrier */
+.case {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e1b7ff; /* Bordure fine et grise */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #f3eaf9; /* Couleur de fond */
+    cursor: pointer; /* Curseur de clic */
+    text-align: center;
+    font-size: 1.5em; /* Taille du texte des numéros */
+    font-weight: bold; /* Texte en gras */
+    overflow: hidden; /* Cache les débordements */
+    width: 100%; /* Les cases remplissent la largeur disponible */
+    aspect-ratio: 1; /* Les cases sont carrées */
+}
+
+/* Cases verrouillées */
+.case.locked {
+    background-color: #d1b1ff; /* Couleur grisée pour les cases verrouillées */
+    cursor: not-allowed; /* Indique qu'elles ne sont pas cliquables */
+}
+
+
+
+/* Images dans les cases */
+.case img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajuste l'image pour remplir la case sans déformation */
+    border-radius: 8px; /* Coins arrondis pour correspondre à la case */
+    display: none; /* Cachée par défaut */
+}
+
+/* Images affichées pour les cases révélées */
+.case.revealed img {
+    display: block; /* Affiche l'image */
+}
+
+/* Texte d'information pour les cases verrouillées */
+.case .message {
+    position: absolute;
+    bottom: 5px; /* Place le message en bas de la case */
+    font-size: 0.8em; /* Texte plus petit */
+    color: #666; /* Couleur grisée */
+    text-align: center;
+}
+
+
+
+/* Responsive design pour petits écrans */
+@media (max-width: 768px) {
+    #calendar {
+        grid-template-columns: repeat(auto-fill, minmax(10%, 1fr)); /* Colonnes flexibles à 20% de largeur */
+        gap: 2%; /* Espacement proportionnel */
+    }
+
+    .case {
+        font-size: 4vw; /* Texte ajusté proportionnellement à la largeur de l'écran */
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #calendar {
+        grid-template-columns: repeat(auto-fill, minmax(15%, 1fr)); /* Colonnes flexibles à 25% de largeur */
+        gap: 2%; /* Espacement proportionnel */
+    }
+
+    .case {
+        font-size: 4vw; /* Texte ajusté proportionnellement à la largeur de l'écran */
+        margin: 10px auto;
+    }
+}
