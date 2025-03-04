@@ -9,11 +9,18 @@ const today = new Date();
 // Chemins des images
 const images = [
     "images/pasInfo.jpg", "images/infoQuestion.jpg", "images/jour3.jpg", "images/indice.jpg", 
-    "images/themeQuestion.jpg", "images/Theme.jpg", "images/infoQuestion.jpg", "images/infoQuestion.jpg", 
-    "images/fiche.jpg", "images/infoQuestion.jpg", "images/infoQuestion.jpg", "images/infoQuestion.jpg",
-    "images/infoQuestion.jpg", "images/infoQuestion.jpg", "images/infoQuestion.jpg", "images/infoQuestion.jpg", 
-    "images/infoQuestion.jpg", "images/infoQuestion.jpg", "images/infoQuestion.jpg","images/infoQuestion.jpg",
-    "images/infoQuestion.jpg", "images/infoQuestion.jpg", "images/infoQuestion.jpg", "images/noel.jpg",
+    "images/themeQuestion.jpg", "images/06_12.jpg", "images/07_12.jpg", "images/08_12.jpg", 
+    "images/09_12.jpg", "images/10_12.jpg", "images/11_12.jpg","images/12_12.jpg", "images/13_12.jpg", 
+    "images/14_12.jpg", "images/15_12.jpg", "images/16_12.jpg", "images/17_12.jpg","images/18_12.jpg", 
+    "images/19_12.jpg", "images/20_12.jpg","images/21_12.jpg", "images/22_12.jpg", "images/23_12.jpg","images/24_12.jpg","images/25_12.jpg",
+    "images/26_12.jpg","images/27_12.jpg","images/28_12.jpg","images/29_12.jpg","images/30_12.jpg","images/31_12.jpg","images/01_01.jpg","images/02_01.jpg","images/03_01.jpg","images/04_01.jpg",
+    "images/05_01.jpg","images/06_01.jpg","images/07_01.jpg","images/08_01.jpg","images/09_01.jpg","images/10_01.jpg","images/11_01.jpg","images/12_01.jpg","images/13_01.jpg","images/14_01.jpg",
+    "images/15_01.jpg","images/16_01.jpg","images/17_01.jpg","images/18_01.jpg","images/19_01.jpg","images/20_01.jpg",
+    "images/09_12.jpg", "images/10_12.jpg", "images/11_12.jpg","images/12_12.jpg", "images/13_12.jpg",
+    "images/05_01.jpg","images/06_01.jpg","images/07_01.jpg","images/08_01.jpg","images/09_01.jpg","images/10_01.jpg","images/11_01.jpg","images/12_01.jpg","images/13_01.jpg","images/14_01.jpg",
+    "images/15_01.jpg","images/16_01.jpg","images/17_01.jpg","images/18_01.jpg","images/19_01.jpg","images/20_01.jpg",
+    "images/06_01.jpg","images/07_01.jpg","images/08_01.jpg","images/09_01.jpg",
+    "images/pasInfo.jpg", "images/infoQuestion.jpg", "images/jour3.jpg",
     // Ajoutez d'autres images pour janvier et février...
 ];
 
@@ -74,6 +81,12 @@ for (let i = 0; i < totalDays; i++) {
             image.style.display = "block"; // Affiche l'image
         }
     });
+
+    calendar.appendChild(dayBox);
+}
+
+
+
 
     calendar.appendChild(dayBox);
 }
